@@ -1,4 +1,4 @@
-var orderId = 1;
+var orderId = 0;
 
 function Pizza(size, crust, meats, veggies) {
   this.size = size;
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(size, crust, meats, veggies);
 
-    $("#checkoutCart").append('<div class="pizzaOrder" id="pizzaItem' + orderId + '">' + newPizza.displayOrder() + '<br><span class="cost">$' + newPizza.calcCost()) + '</span></div>'  ;
-
+    $("#checkoutCart").append('<div class="pizzaOrder" id="pizzaItem' + orderId + '">' + '<div class="cost">' + '<span class="orderNumber">Order #'+ orderId +'</span>$' + newPizza.calcCost() + '</div>' + newPizza.displayOrder() + '</div>');
   });
+  // $("#pizza")
 }); // end document.ready

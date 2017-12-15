@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <div class="row">
+        <h1>THE ONE TRUE PIZZA</h1>
         <div class="col-md-8">
           <form id="orderPizza">
             <div class="form-group">
@@ -23,7 +24,7 @@
                 </div>
                 <div class="col-md-4">
                   <label>
-                    <input type="radio" class="option-input radio" name="size" value="Medium Cheese" checked />
+                    <input type="radio" class="option-input radio" name="size" value="Medium" checked />
                     Medium
                   </label>
                 </div>
@@ -58,46 +59,57 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <h3>Meats</h3>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="meats" value="Pepperoni" />
-                Pepperoni
-              </label>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="meats" value="Ham"  />
-                Ham
-              </label>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="meats" value="Salami"  />
-                Salami
-              </label>
-            </div>
-            <div class="form-group">
-              <h3>Veggies</h3>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="veggies" value="Green Bell Pepper" />
-                Green Bell Pepper
-              </label>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="veggies" value="Onion"  />
-                Onion
-              </label>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="veggies" value="Mushrooms"  />
-                Mushrooms
-              </label>
-              <label>
-                <input type="checkbox" class="option-input checkbox" name="veggies" value="Olives"  />
-                Olives
-              </label>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <h3>Meats</h3>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="meats" value="Pepperoni" />
+                    Pepperoni
+                  </label>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="meats" value="Ham"  />
+                    Ham
+                  </label>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="meats" value="Salami"  />
+                    Salami
+                  </label>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="meats" value="Italian Sausage"  />
+                    Italian Sausage
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <h3>Veggies</h3>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="veggies" value="Green Bell Pepper" />
+                    Green Bell Pepper
+                  </label>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="veggies" value="Onion"  />
+                    Onion
+                  </label>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="veggies" value="Mushrooms"  />
+                    Mushrooms
+                  </label>
+                  <label>
+                    <input type="checkbox" class="option-input checkbox" name="veggies" value="Olives"  />
+                    Olives
+                  </label>
+                </div>
+              </div>
             </div>
             <button type="submit" class="btn btn-primary">Add to Order</button>
           </form>
         </div><!-- end col -->
         <div class="col-md-4">
-
-          <div id="checkoutCart"></div>
+          <form id="formCart">
+            <div id="checkoutCart"></div>
+          </form>
         </div><!-- end col -->
       </div><!-- end row -->
     </div><!-- end container -->
