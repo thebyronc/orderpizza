@@ -1,20 +1,34 @@
-function Pizza(crust, cheese, meats, veggies) {
+var orderId = 1;
+
+function Pizza(size, crust, meats, veggies) {
+  this.size = size;
   this.crust = crust;
-  this.cheese = cheese;
   this.meats = meats;
   this.veggies = veggies;
-  this.cost = 10 + (this.meats.length*2) + this.veggies.length;
+  this.cost = 10;
+  orderId += 1;
+}
+Pizza.prototype.calcCost = function () {
+  var totalCost = this.cost + (this.meats.length*2) + this.veggies.length;
+  if (this.size = "Small") {
+    totalCost -= 2;
+  } else if (this.size = "Large") {
+    totalCost += 2;
+  } else {
+    console.log("Size Medium");
+  }
+  return totalCost;
 }
 Pizza.prototype.displayOrder = function() {
-  return "You've orderd a " + this.crust + " pizza with "+ this.cheese + "  and the following toppings: "  + this.meats + " " + this.veggies + " Cost: " +  this.cost;
+  return "You've orderd a " + this.size + " " + this.crust + " pizza with the following toppings: "  + this.meats + " " + this.veggies;
 }
 
 // front end
 $(document).ready(function() {
   $("#orderPizza").submit(function(event) {
     event.preventDefault();
+    var size = $("input:radio[name=size]:checked").val();
     var crust = $("input:radio[name=crust]:checked").val();
-    var cheese = $("input:radio[name=cheese]:checked").val();
     var meats = [];
     var veggies = [];
     $("input:checkbox[name=meats]:checked").each(function(){
@@ -26,9 +40,9 @@ $(document).ready(function() {
       veggies.push(checkedVeggies);
     });
 
-    var newPizza = new Pizza(crust, cheese, meats, veggies);
+    var newPizza = new Pizza(size, crust, meats, veggies);
 
-    $("#checkoutCart").append('<div>' + newPizza.displayOrder() +'</div>');
+    $("#checkoutCart").append('<div class="pizzaOrder" id="pizzaItem' + orderId + '">' + newPizza.displayOrder() + '<br><span class="cost">$' + newPizza.calcCost()) + '</span></div>'  ;
 
   });
 }); // end document.ready
