@@ -10,9 +10,9 @@ function Pizza(size, crust, meats, veggies) {
 }
 Pizza.prototype.calcCost = function () {
   var totalCost = this.cost + (this.meats.length*2) + this.veggies.length;
-  if (this.size = "Small") {
+  if (this.size === "Small") {
     totalCost -= 2;
-  } else if (this.size = "Large") {
+  } else if (this.size === "Large") {
     totalCost += 2;
   } else {
     console.log("Size Medium");
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     var newPizza = new Pizza(size, crust, meats, veggies);
 
-    $("#checkoutCart").append('<div class="pizzaOrder" id="pizzaItem' + orderId + '">' + '<div class="cost">' + '<span class="orderNumber">Order #'+ orderId +'</span>$' + newPizza.calcCost() + '</div>' + newPizza.displayOrder() + '</div>');
+    $("#checkoutCart").append('<div class="pizzaOrder" id="pizzaItem' + orderId + '">' + '<div class="row cost"><div class="col-md-6">' + '<span>Order #'+ orderId +'</span></div><div class="col-md-6">$' + newPizza.calcCost() + '</div></div>' + newPizza.displayOrder() + '</div>');
   });
   // $("#pizza")
 }); // end document.ready

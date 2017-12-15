@@ -1,5 +1,8 @@
-*{font-family: 'Roboto', sans-serif;}
-
+h1 {
+  font-weight: bolder;
+  border-bottom: 1px solid #F5A503;
+  color: #F5A503;
+}
 .option-input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -28,7 +31,7 @@
   background: #9faab7;
 }
 .option-input:checked {
-  background: #40e0d0;
+  background: #F5A503;
 }
 .option-input:checked::before {
   height: 40px;
@@ -51,30 +54,41 @@
   display: block;
   width: 300px;
   min-height: 100px;
-  border: 1px solid #000;
+  background-color: #FFFFFF;
   padding: 15px;
+  margin: 5px;
 }
 .cost {
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   font-size: 16px;
   margin: 0px;
-  border: 1px solid #000;
+  padding: 0px;
 }
-.orderNumber {
-  text-align: left;
+.cost .col-md-6 {
+  padding: 0px;
+}
+.cost .col-md-6:nth-child(1n+2) {
+  text-align: right;
 }
 body {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: box;
-  background: #e8ebee;
-  color: #9faab7;
+  background: #f2f2f2;
+  color: #292929;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 body label {
   display: block;
   line-height: 40px;
+}
+.btn-orange {
+  background-color: #F5A503;
+  color: #FFFFFF;
+}
+.btn-orange:hover {
+  background-color: #FFAC03;
 }
