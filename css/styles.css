@@ -10,7 +10,7 @@ h1 {
   -o-appearance: none;
   appearance: none;
   position: relative;
-  top: 13.33333px;
+  top: 13.333px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -43,7 +43,9 @@ h1 {
   text-align: center;
   line-height: 40px;
 }
-
+#bg_pepperoni {
+  background-image: url("../img/pepperoni.png");
+}
 .option-input.radio {
   border-radius: 50%;
 }

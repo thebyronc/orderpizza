@@ -23,5 +23,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 | Core Behaviors |
 | :---           |
 | Order a pizza |
+| Able to select a pizza size |
 | Add toppings to the ordered pizza |
-| Totals the final cost of pizza and pizza toppings |
+| Totals the final cost of pizza with toppings |
