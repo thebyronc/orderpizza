@@ -3,10 +3,10 @@ function Pizza(crust, cheese, meats, veggies) {
   this.cheese = cheese;
   this.meats = meats;
   this.veggies = veggies;
-  this.cost = 10 + this.meats.length + this.veggies.length;
+  this.cost = 10 + (this.meats.length*2) + this.veggies.length;
 }
 Pizza.prototype.displayOrder = function() {
-  return "You've orderd a " + this.crust + " pizza with "+ this.cheese + "  and the following toppings: "  + this.meats + " " + this.veggies + " Cost: " + this.cost;
+  return "You've orderd a " + this.crust + " pizza with "+ this.cheese + "  and the following toppings: "  + this.meats + " " + this.veggies + " Cost: " +  this.cost;
 }
 
 // front end
