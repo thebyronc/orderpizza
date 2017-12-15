@@ -10,6 +10,9 @@ Clone this repository and open the index.html
 
 * [Atom](https://atom.io/) - Text editor
 
+## gh-pages
+* [GH-Pages](https://thebyronc.github.io/orderpizza/)
+
 ## Authors
 
 * **Byron Chang** - *Initial work*
