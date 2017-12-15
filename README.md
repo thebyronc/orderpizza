@@ -24,4 +24,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 | :---           |
 | Order a pizza |
 | Add toppings to the ordered pizza |
-| Totals the final cost with pizza and pizza toppings |
+| Totals the final cost of pizza and pizza toppings |
